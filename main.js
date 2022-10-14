@@ -29,14 +29,12 @@ function submitForm(e) {
   var GCS = getElementVal("form3Examplev5");
   var Address = getElementVal("form3Examplea2");
   var AddInformation = getElementVal("form3Examplea3");
-  var ZipCode = getElementVal("form3Examplea4");
-  var Place = getElementVal("form3Examplea5");
   var Country = getElementVal("form3Examplea6");
   var Code = getElementVal("form3Examplea7");
   var PhoneNumber = getElementVal("form3Examplea8");
   var Email = getElementVal("form3Examplea9");
 
-  saveMessages(Firstname, Lastname,Age,Male,Female,SCU,GCS,Address,AddInformation,ZipCode,Place,Country,Code,PhoneNumber,Email);
+  saveMessages(Firstname, Lastname,Age,Male,Female,SCU,GCS,Address,AddInformation,,Country,Code,PhoneNumber,Email);
 
   //   enable alert
   document.querySelector(".alert").style.display = "block";
@@ -50,7 +48,7 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (Firstname, Lastname,Age,Male,Female,SCU,GCS,Address,AddInformation,ZipCode,Place,Country,Code,PhoneNumber,Email) => {
+const saveMessages = (Firstname, Lastname,Age,Male,Female,SCU,GCS,Address,AddInformation,Country,Code,PhoneNumber,Email) => {
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
@@ -63,8 +61,6 @@ const saveMessages = (Firstname, Lastname,Age,Male,Female,SCU,GCS,Address,AddInf
     GCS:GCS,
     Address:Address,
     AddInformation:AddInformation,
-    ZipCode:ZipCode,
-    Place:Place,
     Country:Country,
     Code:Code,
     PhoneNumber:PhoneNumber,
